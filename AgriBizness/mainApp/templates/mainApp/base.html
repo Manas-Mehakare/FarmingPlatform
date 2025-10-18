@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agribusiness Marketplace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="/">🚜 Agribusiness</a>
+            
+            <div>
+                {% if user.is_authenticated %}
+                    <span class="text-light me-2">Hi, {{ user.username }}</span>
+
+                    <a href="{% url 'product_list' %}" class="btn btn-outline-light btn-sm me-2">Marketplace</a>
+
+                    <!-- Farmer Specific Navbar -->
+                    {% if user.profile.role == "farmer" %}
+                        <a href="{% url 'farmer_dashboard' %}" class="btn btn-outline-light btn-sm">Dashboard</a>
+                        <a href="{% url 'farmer_orders' %}" class="btn btn-outline-light btn-sm">📦 Orders</a>
+                    {% endif %}
+
+                    <!-- Corporate Specific Navbar -->
+                    {% if user.is_authenticated and user.profile.role == "corporate" %}
+                        <a href="{% url 'corporate_orders' %}" class="btn btn-outline-light btn-sm">My Orders</a>
+                    {% endif %}
+
+                    <a href="{% url 'about' %}" class="btn btn-outline-light btn-sm me-2">About</a>
+
+
+                    <!-- Logout via POST -->
+                    <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn btn-outline-light btn-sm me-2">Login</a>
+                    <a href="{% url 'signup' %}" class="btn btn-success btn-sm">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
