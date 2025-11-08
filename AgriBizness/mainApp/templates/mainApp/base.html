@@ -12,7 +12,6 @@
             
             <div>
                 {% if user.is_authenticated %}
-                    <span class="text-light me-2">Hi, {{ user.username }}</span>
 
                     <a href="{% url 'product_list' %}" class="btn btn-outline-light btn-sm me-2">Marketplace</a>
 
