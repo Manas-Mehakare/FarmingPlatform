@@ -13,3 +13,4 @@ AgriBizness/mainApp/__pycache__/admin.cpython-314.pyc
 AgriBizness/mainApp/__pycache__/__init__.cpython-314.pyc
 AgriBizness/AgriBizness/__pycache__/wsgi.cpython-314.pyc
 .env
+AgriBizness/db.sqlite3
