@@ -1,8 +1,9 @@
 {% extends "mainApp/base.html" %}
+{% load i18n %}
 {% block content %}
 <div class="container mt-5 text-center">
-    <h1>Welcome to Agribusiness Marketplace 🚜</h1>
-    <p class="lead">Connecting farmers, corporates, and agri-businesses seamlessly.</p>
-    <a href="{% url 'product_list' %}" class="btn btn-success btn-lg mt-3">Go to Marketplace</a>
+    <h1>{% trans "Welcome to Agribusiness Marketplace 🚜" %}</h1>
+    <p class="lead">{% trans "Connecting farmers, corporates, and agri-businesses seamlessly." %}</p>
+    <a href="{% url 'product_list' %}" class="btn btn-success btn-lg mt-3">{% trans "Go to Marketplace" %}</a>
 </div>
 {% endblock %}

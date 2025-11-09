@@ -1,10 +1,16 @@
 {% extends "mainApp/base.html" %}
+{% load i18n %}
 {% block content %}
-<h2>Sign Up</h2>
+<h2>{% trans "Sign Up" %}</h2>
+
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-success">Register</button>
+    <button type="submit" class="btn btn-success">{% trans "Register" %}</button>
 </form>
-<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+<p>
+    {% trans "Already have an account?" %}
+    <a href="{% url 'login' %}">{% trans "Login" %}</a>
+</p>
 {% endblock %}

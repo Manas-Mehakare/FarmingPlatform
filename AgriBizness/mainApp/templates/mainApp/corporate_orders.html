@@ -1,16 +1,17 @@
 {% extends "mainApp/base.html" %}
+{% load i18n %}
 {% block content %}
-<h2>My Orders</h2>
+<h2>{% trans "My Orders" %}</h2>
 
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
-            <th>Product</th>
-            <th>Price (₹)</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Status</th>
-            <th>Ordered On</th>
+            <th>{% trans "Product" %}</th>
+            <th>{% trans "Price (₹)" %}</th>
+            <th>{% trans "Quantity" %}</th>
+            <th>{% trans "Total" %}</th>
+            <th>{% trans "Status" %}</th>
+            <th>{% trans "Ordered On" %}</th>
         </tr>
     </thead>
     <tbody>
@@ -20,12 +21,12 @@
             <td>₹{{ order.product.price|floatformat:2 }}</td>
             <td>{{ order.quantity }}</td>
             <td>₹{{ order.total_price|floatformat:2 }}</td>
-            <td>{{ order.status|default:"Pending" }}</td>
+            <td>{{ order.status|default:_("Pending") }}</td>
             <td>{{ order.created_at|date:"d M Y, H:i" }}</td>
         </tr>
         {% empty %}
         <tr>
-            <td colspan="6" class="text-center text-muted">No orders placed yet.</td>
+            <td colspan="6" class="text-center text-muted">{% trans "No orders placed yet." %}</td>
         </tr>
         {% endfor %}
     </tbody>

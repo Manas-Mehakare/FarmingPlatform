@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-09 18:22+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\AgriBizness\settings.py:139
+msgid "English"
+msgstr "अंग्रेज़ी"
+
+#: .\AgriBizness\settings.py:140
+msgid "Hindi"
+msgstr "हिन्दी"
+
+#: .\mainApp\templates\mainApp\about.html:5
+msgid "About Agribusiness Marketplace"
+msgstr "एग्रीबिज़नेस मार्केटप्लेस के बारे में"
+
+#: .\mainApp\templates\mainApp\about.html:7
+msgid ""
+"\n"
+"    This platform allows farmers to sell their produce and corporates to buy "
+"directly.\n"
+"    We aim to simplify logistics, ensure transparency, and provide AI-driven "
+"advisory.\n"
+"    "
+msgstr ""
+"\n"
+"    यह प्लेटफ़ॉर्म किसानों को अपनी उपज बेचने और कॉर्पोरेट्स को सीधे खरीदने "
+"की अनुमति देता है।\n"
+"    हमारा लक्ष्य लॉजिस्टिक्स को सरल बनाना, पारदर्शिता सुनिश्चित करना, और AI-"
+"आधारित सलाह देना है।\n"
+"    "
+
+#: .\mainApp\templates\mainApp\about.html:12
+msgid ""
+"\n"
+"    Our mission is to empower farmers, connect stakeholders, and improve "
+"supply chain efficiency.\n"
+"    "
+msgstr ""
+"\n"
+"    हमारा मिशन किसानों को सशक्त बनाना, हितधारकों को जोड़ना, और सप्लाई "
+"चेन की दक्षता में सुधार करना है।\n"
+"    "
+
+#: .\mainApp\templates\mainApp\add_product.html:4
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:6
+msgid "Add New Product"
+msgstr "नया उत्पाद जोड़ें"
+
+#: .\mainApp\templates\mainApp\add_product.html:9
+msgid "Save Product"
+msgstr "उत्पाद सहेजें"
+
+#: .\mainApp\templates\mainApp\base.html:6
+msgid "Agribusiness Marketplace"
+msgstr "एग्रीबिज़नेस मार्केटप्लेस"
+
+#: .\mainApp\templates\mainApp\base.html:12
+msgid "🚜 Agribusiness"
+msgstr "🚜 एग्रीबिज़नेस"
+
+#: .\mainApp\templates\mainApp\base.html:27
+msgid "Marketplace"
+msgstr "मार्केटप्लेस"
+
+#: .\mainApp\templates\mainApp\base.html:31
+msgid "Dashboard"
+msgstr "डैशबोर्ड"
+
+#: .\mainApp\templates\mainApp\base.html:32
+msgid "Orders"
+msgstr "ऑर्डर"
+
+#: .\mainApp\templates\mainApp\base.html:37
+#: .\mainApp\templates\mainApp\corporate_orders.html:4
+msgid "My Orders"
+msgstr "मेरे ऑर्डर"
+
+#: .\mainApp\templates\mainApp\base.html:40
+msgid "About"
+msgstr "बारे में"
+
+#: .\mainApp\templates\mainApp\base.html:45
+msgid "Logout"
+msgstr "लॉग आउट"
+
+#: .\mainApp\templates\mainApp\base.html:48
+#: .\mainApp\templates\mainApp\login.html:4
+#: .\mainApp\templates\mainApp\login.html:9
+#: .\mainApp\templates\mainApp\signup.html:14
+msgid "Login"
+msgstr "लॉग इन"
+
+#: .\mainApp\templates\mainApp\base.html:49
+#: .\mainApp\templates\mainApp\signup.html:4
+msgid "Sign Up"
+msgstr "साइन अप"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:9
+#: .\mainApp\templates\mainApp\farmer_orders.html:11
+msgid "Product"
+msgstr "उत्पाद"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:10
+msgid "Price (₹)"
+msgstr "कीमत (₹)"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:11
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:13
+#: .\mainApp\templates\mainApp\farmer_orders.html:13
+msgid "Quantity"
+msgstr "मात्रा"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:12
+msgid "Total"
+msgstr "कुल"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:13
+#: .\mainApp\templates\mainApp\farmer_orders.html:15
+msgid "Status"
+msgstr "स्थिति"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:14
+msgid "Ordered On"
+msgstr "आदेश की तिथि"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:24
+#: .\mainApp\templates\mainApp\update_order_status.html:13
+msgid "Pending"
+msgstr "प्रतीक्षित"
+
+#: .\mainApp\templates\mainApp\corporate_orders.html:29
+msgid "No orders placed yet."
+msgstr "अभी तक कोई ऑर्डर नहीं दिया गया।"
+
+#: .\mainApp\templates\mainApp\delete_product.html:4
+#, python-format
+msgid "Delete Product: %(product.name)s"
+msgstr "उत्पाद हटाएं: %(product.name)s"
+
+#: .\mainApp\templates\mainApp\delete_product.html:5
+msgid "Are you sure you want to delete this product?"
+msgstr "क्या आप वाकई इस उत्पाद को हटाना चाहते हैं?"
+
+#: .\mainApp\templates\mainApp\delete_product.html:9
+msgid "Yes, Delete"
+msgstr "हाँ, हटाएं"
+
+#: .\mainApp\templates\mainApp\delete_product.html:10
+#: .\mainApp\templates\mainApp\edit_product.html:10
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: .\mainApp\templates\mainApp\edit_product.html:4
+#, python-format
+msgid "Edit Product: %(product.name)s"
+msgstr "उत्पाद संपादित करें: %(product.name)s"
+
+#: .\mainApp\templates\mainApp\edit_product.html:9
+msgid "Update Product"
+msgstr "उत्पाद अपडेट करें"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:4
+msgid "Farmer Dashboard"
+msgstr "किसान डैशबोर्ड"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:11
+msgid "Name"
+msgstr "नाम"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:12
+msgid "Price"
+msgstr "कीमत"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:14
+msgid "Actions"
+msgstr "कार्रवाइयाँ"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:24
+msgid "Edit"
+msgstr "संपादित करें"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:25
+msgid "Delete"
+msgstr "हटाएँ"
+
+#: .\mainApp\templates\mainApp\farmer_dashboard.html:30
+msgid "You have no products listed."
+msgstr "आपके पास कोई उत्पाद सूचीबद्ध नहीं है।"
+
+#: .\mainApp\templates\mainApp\farmer_orders.html:5
+msgid "Orders for Your Products"
+msgstr "आपके उत्पादों के ऑर्डर"
+
+#: .\mainApp\templates\mainApp\farmer_orders.html:12
+msgid "Buyer"
+msgstr "खरीदार"
+
+#: .\mainApp\templates\mainApp\farmer_orders.html:14
+msgid "Total Price"
+msgstr "कुल कीमत"
+
+#: .\mainApp\templates\mainApp\farmer_orders.html:16
+msgid "Action"
+msgstr "क्रिया"
+
+#: .\mainApp\templates\mainApp\farmer_orders.html:28
+#: .\mainApp\templates\mainApp\update_order_status.html:19
+msgid "Update Status"
+msgstr "स्थिति अपडेट करें"
+
+#: .\mainApp\templates\mainApp\farmer_orders.html:35
+msgid "No orders for your products yet."
+msgstr "आपके उत्पादों के लिए अभी तक कोई ऑर्डर नहीं है।"
+
+#: .\mainApp\templates\mainApp\home.html:5
+msgid "Welcome to Agribusiness Marketplace 🚜"
+msgstr "एग्रीबिज़नेस मार्केटप्लेस में आपका स्वागत है 🚜"
+
+#: .\mainApp\templates\mainApp\home.html:6
+msgid "Connecting farmers, corporates, and agri-businesses seamlessly."
+msgstr "किसानों, कॉर्पोरेट्स और एग्री-व्यवसायों को सहज रूप से जोड़ना।"
+
+#: .\mainApp\templates\mainApp\home.html:7
+msgid "Go to Marketplace"
+msgstr "मार्केटप्लेस पर जाएँ"
+
+#: .\mainApp\templates\mainApp\login.html:13
+msgid "Don’t have an account?"
+msgstr "क्या आपका कोई अकाउंट नहीं है?"
+
+#: .\mainApp\templates\mainApp\login.html:14
+msgid "Sign up"
+msgstr "रजिस्टर करें"
+
+#: .\mainApp\templates\mainApp\order_success.html:4
+msgid "Order placed successfully!"
+msgstr "ऑर्डर सफलतापूर्वक दिया गया!"
+
+#: .\mainApp\templates\mainApp\order_success.html:5
+#, python-format
+msgid ""
+"Your order for <strong>%(order.product.name)s</strong> has been confirmed."
+msgstr ""
+"आपका ऑर्डर <strong>%(order.product.name)s</strong> की पुष्टि हो गई है।"
+
+#: .\mainApp\templates\mainApp\order_success.html:6
+msgid "Back to Products"
+msgstr "उत्पादों पर वापस जाएँ"
+
+#: .\mainApp\templates\mainApp\product_detail.html:6
+#: .\mainApp\templates\mainApp\product_list.html:12
+msgid "Price:"
+msgstr "कीमत:"
+
+#: .\mainApp\templates\mainApp\product_detail.html:7
+msgid "Available:"
+msgstr "उपलब्ध:"
+
+#: .\mainApp\templates\mainApp\product_detail.html:11
+msgid "Quantity:"
+msgstr "मात्रा:"
+
+#: .\mainApp\templates\mainApp\product_detail.html:13
+msgid "Place Order"
+msgstr "ऑर्डर करें"
+
+#: .\mainApp\templates\mainApp\product_list.html:4
+msgid "Available Products"
+msgstr "उपलब्ध उत्पाद"
+
+#: .\mainApp\templates\mainApp\product_list.html:12
+msgid "per unit"
+msgstr "प्रति यूनिट"
+
+#: .\mainApp\templates\mainApp\product_list.html:15
+msgid "View"
+msgstr "देखें"
+
+#: .\mainApp\templates\mainApp\product_list.html:17
+msgid "Out of Stock"
+msgstr "स्टॉक खत्म"
+
+#: .\mainApp\templates\mainApp\product_list.html:23
+msgid "No products available."
+msgstr "कोई उत्पाद उपलब्ध नहीं है।"
+
+#: .\mainApp\templates\mainApp\signup.html:9
+msgid "Register"
+msgstr "रजिस्टर करें"
+
+#: .\mainApp\templates\mainApp\signup.html:13
+msgid "Already have an account?"
+msgstr "क्या आपके पास पहले से अकाउंट है?"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:5
+msgid "Update Order Status"
+msgstr "ऑर्डर की स्थिति अपडेट करें"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:6
+#, python-format
+msgid ""
+"Order #%(order.id)s - %(order.product.name)s (Buyer: "
+"%(order.buyer.user.username)s)"
+msgstr ""
+"ऑर्डर #%(order.id)s - %(order.product.name)s (खरीदार: %(order.buyer.user.username)s)"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:11
+msgid "New Status"
+msgstr "नई स्थिति"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:14
+msgid "Shipping"
+msgstr "शिपिंग"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:15
+msgid "Delivered"
+msgstr "डिलिवर हो गया"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:16
+msgid "Cancelled"
+msgstr "रद्द किया गया"
+
+#: .\mainApp\templates\mainApp\update_order_status.html:20
+msgid "Back"
+msgstr "वापस"
+
+#: .\mainApp\views.py:36
+msgid "Invalid quantity."
+msgstr "अमान्य मात्रा।"
+
+#: .\mainApp\views.py:43
+#, python-format
+msgid "Only %(avail)d units available!"
+msgstr "केवल %(avail)d यूनिट उपलब्ध हैं!"
+
+#: .\mainApp\views.py:92
+msgid "Signup successful. Welcome!"
+msgstr "साइनअप सफल हुआ। स्वागत है!"
+
+#: .\mainApp\views.py:105
+msgid "❌ Only farmers can add products."
+msgstr "❌ केवल किसान ही उत्पाद जोड़ सकते हैं।"
+
+#: .\mainApp\views.py:113
+msgid "Product added successfully!"
+msgstr "उत्पाद सफलतापूर्वक जोड़ा गया!"
+
+#: .\mainApp\views.py:125 .\mainApp\views.py:165 .\mainApp\views.py:176
+msgid "❌ Only farmers can access this page."
+msgstr "❌ केवल किसान इस पृष्ठ तक पहुँच सकते हैं।"
+
+#: .\mainApp\views.py:140
+msgid "Product updated successfully!"
+msgstr "उत्पाद सफलतापूर्वक अपडेट किया गया!"
+
+#: .\mainApp\views.py:155
+msgid "Product deleted successfully!"
+msgstr "उत्पाद सफलतापूर्वक हटा दिया गया!"
+
+#: .\mainApp\views.py:192
+#, python-format
+msgid "Order #%(id)s status updated!"
+msgstr "ऑर्डर #%(id)s की स्थिति अपडेट हो गई!"
+
+#: .\mainApp\views.py:194
+msgid "Invalid status."
+msgstr "अमान्य स्थिति।"
+
+#: .\mainApp\views.py:205
+msgid "❌ Only corporates can view this page."
+msgstr "❌ केवल कॉर्पोरेट्स इस पृष्ठ को देख सकते हैं।"

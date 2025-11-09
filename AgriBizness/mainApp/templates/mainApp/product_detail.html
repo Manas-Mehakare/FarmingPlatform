@@ -1,14 +1,15 @@
 {% extends "mainApp/base.html" %}
+{% load i18n %}
 {% block content %}
 <h2>{{ product.name }}</h2>
 <p>{{ product.description }}</p>
-<p><strong>Price:</strong> ₹{{ product.price }}</p>
-<p><strong>Available:</strong> {{ product.quantity }}</p>
+<p><strong>{% trans "Price:" %}</strong> ₹{{ product.price }}</p>
+<p><strong>{% trans "Available:" %}</strong> {{ product.quantity }}</p>
 
 <form method="post">
     {% csrf_token %}
-    <label for="qty">Quantity:</label>
+    <label for="qty">{% trans "Quantity:" %}</label>
     <input type="number" name="quantity" min="1" max="{{ product.quantity }}" required>
-    <button type="submit" class="btn btn-primary">Place Order</button>
+    <button type="submit" class="btn btn-primary">{% trans "Place Order" %}</button>
 </form>
 {% endblock %}
