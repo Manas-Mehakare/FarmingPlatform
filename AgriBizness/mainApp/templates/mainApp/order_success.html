@@ -1,6 +1,7 @@
 {% extends "mainApp/base.html" %}
+{% load i18n %}
 {% block content %}
-<h2>✅ Order placed successfully!</h2>
-<p>Your order for <strong>{{ order.product.name }}</strong> has been confirmed.</p>
-<a href="{% url 'product_list' %}" class="btn btn-secondary">Back to Products</a>
+<h2>✅ {% trans "Order placed successfully!" %}</h2>
+<p>{% blocktrans %}Your order for <strong>{{ order.product.name }}</strong> has been confirmed.{% endblocktrans %}</p>
+<a href="{% url 'product_list' %}" class="btn btn-secondary">{% trans "Back to Products" %}</a>
 {% endblock %}

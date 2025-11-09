@@ -1,6 +1,7 @@
 {% extends "mainApp/base.html" %}
+{% load i18n %}
 {% block content %}
-<h2>Available Products</h2>
+<h2>{% trans "Available Products" %}</h2>
 <div class="row">
     {% for product in products %}
         <div class="col-md-4 mb-3">
@@ -8,18 +9,18 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p>{{ product.description|truncatewords:15 }}</p>
-                    <p><strong>Price:</strong> ₹{{ product.price }} per unit</p>
+                    <p><strong>{% trans "Price:" %}</strong> ₹{{ product.price }} {% trans "per unit" %}</p>
                     
                     {% if product.quantity > 0 %}
-                        <a href="{% url 'product_detail' product.id %}" class="btn btn-success">View</a>
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-success">{% trans "View" %}</a>
                     {% else %}
-                        <button class="btn btn-secondary" disabled>Out of Stock</button>
+                        <button class="btn btn-secondary" disabled>{% trans "Out of Stock" %}</button>
                     {% endif %}
                 </div>
             </div>
         </div>
     {% empty %}
-        <p>No products available.</p>
+        <p>{% trans "No products available." %}</p>
     {% endfor %}
 </div>
 {% endblock %}
