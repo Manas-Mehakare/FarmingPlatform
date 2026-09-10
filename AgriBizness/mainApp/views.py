@@ -1,4 +1,3 @@
-# mainApp/views.py
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product, Order, Profile
 from django.contrib.auth.decorators import login_required
@@ -36,7 +35,6 @@ def product_detail(request, pk):
                 "error": _("Invalid quantity.")
             })
 
-        # Check if requested quantity is available
         if qty > product.quantity:
             return render(request, "mainApp/product_detail.html", {
                 "product": product,
@@ -45,15 +43,13 @@ def product_detail(request, pk):
 
         buyer = Profile.objects.get(user=request.user)
 
-        # Create order
         order = Order(
             product=product,
             buyer=buyer,
             quantity=qty,
         )
-        order.save()  # triggers model's custom save() if any
+        order.save()
 
-        # Reduce product quantity
         product.quantity -= qty
         product.save()
 
@@ -62,7 +58,6 @@ def product_detail(request, pk):
     return render(request, "mainApp/product_detail.html", {"product": product})
 
 
-# Signup form
 class SignUpForm(forms.ModelForm):
     ROLE_CHOICES = [
         ('farmer', _lazy('Farmer')),
@@ -88,7 +83,7 @@ def signup(request):
             )
             role = form.cleaned_data['role']
             Profile.objects.create(user=user, role=role)
-            login(request, user)  # auto login after signup
+            login(request, user)
             messages.success(request, _("Signup successful. Welcome!"))
             return redirect('product_list')
     else:
@@ -100,15 +95,14 @@ def signup(request):
 def add_product(request):
     profile = Profile.objects.get(user=request.user)
 
-    # Only farmers can add products
     if profile.role != "farmer":
-        return HttpResponseForbidden(_("❌ Only farmers can add products."))
+        return HttpResponseForbidden(_(" Only farmers can add products."))
 
     if request.method == "POST":
         form = ProductForm(request.POST)
         if form.is_valid():
             product = form.save(commit=False)
-            product.seller = profile  # set seller as logged-in farmer
+            product.seller = profile 
             product.save()
             messages.success(request, _("Product added successfully!"))
             return redirect('product_list')
@@ -122,7 +116,7 @@ def add_product(request):
 def farmer_dashboard(request):
     profile = Profile.objects.get(user=request.user)
     if profile.role != 'farmer':
-        return HttpResponseForbidden(_("❌ Only farmers can access this page."))
+        return HttpResponseForbidden(_(" Only farmers can access this page."))
 
     products = Product.objects.filter(seller=profile)
     return render(request, 'mainApp/farmer_dashboard.html', {'products': products})
@@ -162,9 +156,8 @@ def delete_product(request, pk):
 def farmer_orders(request):
     profile = Profile.objects.get(user=request.user)
     if profile.role != "farmer":
-        return HttpResponseForbidden(_("❌ Only farmers can access this page."))
+        return HttpResponseForbidden(_(" Only farmers can access this page."))
 
-    # Orders for products that this farmer is selling
     orders = Order.objects.filter(product__seller=profile).select_related('product', 'buyer')
     return render(request, "mainApp/farmer_orders.html", {"orders": orders})
 
@@ -173,21 +166,15 @@ def farmer_orders(request):
 def update_order_status(request, order_id):
     profile = Profile.objects.get(user=request.user)
     if profile.role != "farmer":
-        return HttpResponseForbidden(_("❌ Only farmers can access this page."))
+        return HttpResponseForbidden(_(" Only farmers can access this page."))
 
     order = get_object_or_404(Order, id=order_id, product__seller=profile)
 
     if request.method == "POST":
         new_status = request.POST.get("status")
-        # Acceptable statuses - translate these labels in templates if shown to users
-        valid_statuses = [Order.PENDING, 'shipping', Order.DELIVERED, Order.CANCELLED]
+        valid_statuses = [Order.PENDING, Order.SHIPPING, Order.DELIVERED, Order.CANCELLED]
         if new_status in valid_statuses:
-            # Optional: map 'shipping' to a model constant if defined
-            if new_status == 'shipping':
-                # try to use a SHIPPING constant, fallback to the string 'shipping'
-                order.status = getattr(Order, 'SHIPPING', 'shipping')
-            else:
-                order.status = new_status
+            order.status = new_status
             order.save()
             messages.success(request, _("Order #%(id)s status updated!") % {"id": order.id})
         else:
@@ -202,7 +189,7 @@ def corporate_orders(request):
     profile = Profile.objects.get(user=request.user)
 
     if profile.role != "corporate":
-        return HttpResponseForbidden(_("❌ Only corporates can view this page."))
+        return HttpResponseForbidden(_("Only corporates can view this page."))
 
     orders = Order.objects.filter(buyer=profile).select_related("product")
     return render(request, "mainApp/corporate_orders.html", {"orders": orders})

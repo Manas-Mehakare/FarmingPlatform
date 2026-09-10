@@ -15,22 +15,16 @@ import os
 from dotenv import load_dotenv
 from django.utils.translation import gettext_lazy as _
 
-# Load environment variables from .env
 load_dotenv()
 
-# Get SECRET_KEY from environment
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-# Optional: other vars
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 ALLOWED_HOSTS = os.getenv(
     "ALLOWED_HOSTS",
