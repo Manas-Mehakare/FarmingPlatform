@@ -212,6 +212,13 @@ MIT-ADT University, Pune
 
 GitHub: https://github.com/Manas-Mehakare
 
+Aditya Dudhanale
+
+B.Tech Computer Science and Engineering (AI)  
+MIT-ADT University, Pune
+
+GitHub: https://github.com/newbee2024
+
 ## License
 
 This project was developed for educational purposes.
